@@ -5,7 +5,8 @@ sidebar_position: 2
 description: "Moralis Streams Triggers. Run smart contract functions against Blockchain Events."
 ---
 
-With Moralis Triggers you can run (read-only) smart contract functions and have the result be part of your Webhook.
+With Moralis Triggers you can run (read-only) smart contract functions and have the result be part of your Webhook. A trigger allows you to call a smart contract function when a specific event happens and add that data to the webhook.
+For example, if you want to call the balanceOf function every time there’s an ERC20 token transfer, you can create a trigger that does this. You will then get both the transfer details and the resulting balance data in your webhook.
 
 Let us dive into an example right away. Imagine you have a stream that listens to a bunch of addresses and in particular, you are interested in the "erc20Transfers" part of your Webhook. Because you are maintaining a database with all the token balances of the monitored addresses, you normally get the balances after receiving a Webhook with the Moralis API. But what if you can have the balances be part of each token transfer in your Webhook right away? That is now possible with Moralis Triggers!
 
